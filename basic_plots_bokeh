@@ -1,0 +1,25 @@
+from bokeh.plotting import figure, output_file, show
+
+X=[5,20,30,40,50]
+Y=[5,4,3,2,1]
+
+output_file("check.html")
+
+p=figure(plot_width=400, plot_height=400)
+p.circle(X,Y,size=10,color="purple",alpha=0.5)
+or
+p.square(X,Y,size=10,color="purple",alpha=0.5)
+or
+p.triangle(X,Y,size=10,color="purple",alpha=0.5)
+or
+p.asterisk(X,Y,size=10,color="purple",alpha=0.5)
+or
+p.line(X,Y,line_width=2)
+
+X=[14,15,16]
+Y=[5,4,3]
+A=[10,11,12,13]
+B=[4,3,2,1]
+p.multi_line([X,Y],[A,B],color=["firebrick", "navy"], alpha=[0.8, 0.3], line_width=4)
+
+show(p)
