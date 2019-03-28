@@ -1,0 +1,14 @@
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+%matplotlib inline 
+
+G = nx.Graph()
+
+node_list = [48,88,49]
+G.add_nodes_from(node_list)
+
+edge_list = [(88,90,2000), (48,90,100) , (88,42,15) , (88,9,25) , (88,19,15) , (49,90,27)]
+G.add_weighted_edges_from(edge_list)
+
+nx.draw(G, with_labels=True, font_weight='bold')
